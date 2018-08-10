@@ -26,29 +26,30 @@ if (~arr.indexOf('react')) {
 
 Array.prototype.includes（value：任意值）： boolean
 如果传入的值在当前数组（this）中则返回 true，否则返回 false：
-
-> ['a', 'b', 'c'].includes('a')
-true
-> ['a', 'b', 'c'].includes('d')
-false
+``` javascript
+['a', 'b', 'c'].includes('a')  // true
+['a', 'b', 'c'].includes('d')  // false
+```
 includes 方法与 indexOf 方法很相似——下面两个表达式是等价的：
 
 arr.includes(x)
 arr.indexOf(x) >= 0
-唯一的区别是 includes() 方法能找到 NaN，而 indexOf() 不行：
 
-> [NaN].includes(NaN)
-true
-> [NaN].indexOf(NaN)
--1
+唯一的区别是 includes() 方法能找到 NaN，而 indexOf() 不行：
+``` javascript
+[NaN].includes(NaN)  // true
+[NaN].indexOf(NaN)  // -1
+```
+
 includes 不会区分 +0 和 -0 （这也与其他 JavaScript 特性表现一致）：
 
-> [-0].includes(+0)
-true
+>     [-0].includes(+0)  // true
 
 类型数组也有 includes() 方法：
 
 Typed Arrays will also have a method includes():
 
+``` javascript
 let tarr = Uint8Array.of(12, 5, 3);
 console.log(tarr.includes(5)); // true
+```
