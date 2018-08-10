@@ -16,7 +16,7 @@ if (arr.indexOf('react') !== -1) {
   console.log('Can use React')
 }
 
-// 或者使用一点点hack 位运算符 ~ 使代码更加紧凑一些，因为~（位异或）对任何数字相当于-(a + 1):
+// 或者使用~（位异非），对任何数字 a 相当于 -(a + 1)
 if (~arr.indexOf('react')) {
   console.log('Can use React')
 }
