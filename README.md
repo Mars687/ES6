@@ -2,8 +2,8 @@
 
 # ES7 特性
 
-1.Array.prototype.includes
-2.Exponentiation Operator(求幂运算)
+1. Array.prototype.includes
+2. Exponentiation Operator(求幂运算)
 
 ## Array.prototype.includes
 
@@ -479,7 +479,7 @@ c: 4
 
 其次，在版本管理上，不会出现因为一个逗号，而使本来只有一行的修改，变成两行。例如下面：
 
->从
+``` javascript
 
 (
   'abc'
@@ -490,7 +490,7 @@ c: 4
   'abc',
   'def'
 )
- 
+```
 
 在我们版本管理系统里，它会监测到你有两处更改，但是如果我们不必去关心逗号的存在，每一行都有逗号时，新加一行，也只会监测到一行的修改。
 
